@@ -1,0 +1,534 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* main coding here */
+
+.header-section{
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    border-bottom: 1px solid black;
+    box-shadow: -1px 1px 4px #dbd3cd;
+}
+
+.header-section .header-logo{
+    width: 30px;
+}
+.header-section img{
+    width: 70px;
+    margin-top: 10px;
+}
+
+/* to change png image color we can use like this */
+.header-section img {
+    /* filter: invert(47%);
+    -webkit-filter: saturate(100); */
+
+    filter: invert(23%) sepia(98%) saturate(7339%) hue-rotate(21deg) brightness(84%) contrast(126%);
+
+    /* filter: invert(16%) sepia(99%) saturate(7404%) hue-rotate(4deg) brightness(95%) contrast(118%); */
+}
+
+.header-section .header-menu{
+    width: 70%;
+}
+.header-section .header-menu ul{
+    list-style-type: none;
+    text-align: right;
+    line-height: 60px;
+}
+.header-section .header-menu ul li{
+    display: inline-block;
+    padding: 0px 15px;
+}
+.header-section .header-menu ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+
+}
+
+/* banner section start */
+
+.banner-section{
+    background-image: url(./images/bannar-bg.jpg);
+    padding: 280px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-section h1{
+    font-size: 45px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    padding: 5px 0px;
+}
+.banner-section p{
+        font-size: 22px;
+        text-align: center;
+        padding: 10px;
+        color: white;
+        font-family: sans-serif;
+}
+.banner-section .buttons{
+    display: block;
+    height: 72px;
+    margin: auto;
+    margin-left: 475px;
+    margin-top: 25px;
+}
+
+.banner-section .buttons a{
+    padding: 14px 19px;
+    background-color: white;
+    border-radius: 7px;
+    top: 23px;
+    position: relative;
+    margin-left: 10px;
+    color: #0000008c;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.banner-section .buttons a:hover{
+    background-color: rgb(107, 107, 212);
+    transition: .5s;
+    color: white;
+}
+.banner-section{
+    position: relative;
+    z-index: 1;
+}
+
+.banner-section::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .5;
+}
+
+.pricing-section{
+    text-align: center;
+    padding: 30px 0px;
+    height: 865px;
+    background-color: rgb(236 236 236 / 82%);
+    
+}
+.price-tag{
+    box-shadow: 1px 1px 5px #c5c4c4f0;
+    width: 29%;
+    padding: 20px 15px;
+    /* margin-right: 22px; */
+    background: white;
+}
+
+.price-tag:nth-child(2){
+    margin: 0px 33px;
+}
+.pricing-section p{
+    font-family: sans-serif;
+}
+.pricing-section h1{
+    padding: 15px 0px;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.pricing-section .price-head-body h1{
+    padding: 15px 0px;
+    font-size: 50px;
+    font-family: sans-serif;
+    background-color: #d8d8d8cf;
+    padding: 1px 9px;
+}
+.pricing-section .price-tag .price-tag-head{
+    /* width: 30%; */
+    text-align: left;
+    /* border-bottom: 1px solid black; */
+    padding: 10px 0px;
+}
+.pricing-section .price-tag .price-tag-head span{
+    font-size: 19px;
+}
+.pricing-section .price-tag .price-tag-head h3{
+    padding: 10px 0px;
+}
+
+.pricing-tag-body{
+    text-align: left;
+    padding: 57px 0px 20px 0px;
+
+}
+.pricing-tag-body ul{
+    list-style-type: none;
+}
+.pricing-tag-body ul li{
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.pricing-tag-body ul li:nth-child(1):before,
+.pricing-tag-body ul li:nth-child(2):before,
+.pricing-tag-body ul li:nth-child(3):before{
+   content: "\f00c";
+   font-family: "Font Awesome 5 Free"; 
+   font-weight: 900; 
+   font-size: 20px;
+   padding-right: 35px;
+   color: orange;
+}
+
+.pricing-tag-body ul li:nth-child(4):before,
+.pricing-tag-body ul li:nth-child(5):before,
+.pricing-tag-body ul li:nth-child(6):before{
+   content: "\f00d";
+   font-family: "Font Awesome 5 Free"; 
+   font-weight: 900; 
+   font-size: 20px;
+   padding-right: 35px;
+   color: orange;
+}
+
+/* hover effect */
+.price-tag:hover .price-tag-head{
+    background-color:orange;
+    transition: 1s;
+}
+.price-tag:hover .button a{
+    background-color:orange;
+    transform: 1s;
+    color: white;
+}
+.pricing-section .button{
+    text-align: left;
+    display: inline-block;
+}
+.pricing-section .button a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    display: inline-block;
+    box-shadow: 1px 1px 23px -3px #5596d1;
+    border-radius: 7px;
+}
+
+.price-head-body{
+    margin-left: 8px;
+}
+
+hr{
+    height: 0px;
+    width: 378px;
+    background-color: #b1b1b1;
+    margin-left: -23px;
+}
+
+.pricing3-div{
+    padding: 66px 0px;
+}
+
+/* team member section */
+
+.team-member-section .team-members{
+    height: 355px;
+    width: 22%;
+    border: 4px double #e6b344;
+    padding: 20px 0px;
+}
+
+.team-member-section .team-members img{
+    width: 100%;
+}
+.team-member-section .team-members h3,p{
+   padding: 5px 0px;
+   text-align: center;
+}
+
+.team-member-section h1{
+    text-align: center;
+    font-family: sans-serif;
+    padding: 30px 0px;
+}
+
+.team-member-section .team-members:nth-child(1),
+.team-member-section .team-members:nth-child(2),
+.team-member-section .team-members:nth-child(3),
+.team-member-section .team-members:nth-child(4){
+    margin:0px 14px;
+}
+
+.team-member-section {
+    height: 535px;
+    /* background-color: aqua; */
+    padding: 40px;
+}
+
+/* team end */
+
+.subscribe-section{
+    text-align: center;
+    background-color: #b1b1b136;
+    padding: 50px 0px;
+}
+.subscribe-section h1{
+    text-align: center;
+    padding: 40px 0px;
+    font-size: 40px;
+ }
+ .subscribe-section p{
+    font-size: 16px;
+    font-family: sans-serif;
+ }
+.subscribe-section label{
+    position: relative;
+    top: 37px;
+    left: -163px;
+    z-index: 1;
+    opacity: 0.5;
+    font-size: 17px;
+}
+
+.subscribe-section .email{
+    height: 50px;
+    width: 500px;
+    border: 2px solid #a6b91a;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px #7a871b;
+    position: relative;
+    display: block;
+    margin: auto;
+    
+}
+
+.subscribe-section button{
+    padding: 16px 60px;
+    display: block;
+    text-align: center;
+    margin: 24px auto;
+    background-color: #959d04;
+    color: white;
+    border-style: none;
+    border-radius: 9px;
+    font-size: 18px;
+}
+
+
+.subscribe-section button:hover{
+    background-color: rgba(248, 205, 67, 0.518);
+    border: 2px solid rgb(136, 91, 8);
+    color: black;
+    transform: 1s;
+}
+
+
+.choose-us-section{
+    padding: 50px 0px;
+    height: 720px;
+}
+.choose-us-section h1 {
+    padding: 50px 0px;
+    text-align: center;
+}
+.choose-us-section .choose-content .img-section{
+    width: 45%;
+}
+.choose-us-section .choose-content .img-section img{
+    width: 495px;
+}
+.choose-us-section .choose-content .right-content{
+    width: 54%;
+    text-align: left !important;
+}
+.choose-us-section .choose-content .right-content p{
+
+    text-align: left !important;
+    line-height: 2;
+    padding: 5px 0px;
+}
+
+.choose-us-section .choose-content:nth-child(1),
+.choose-us-section .choose-content:nth-child(2){
+    margin:0px 14px;
+}
+
+.right-text{
+    padding: 0 0 20px 0;
+}
+
+
+/* subscribtoin section start */
+
+.feedback-section{
+
+    text-align: center;
+    background-color: #b1b1b136;
+    padding: 50px 0px;
+}
+.feedback-section h1{
+
+    text-align: center;
+    padding: 40px 0px;
+    font-size: 40px;
+    font-family: sans-serif
+}
+.feedback-section p{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.feedback-section .user1{
+    height: 380px;
+    width: 30%;
+    border: 1px solid #5255c5;
+    display: inline-block;
+    margin: 10px;
+}
+.feedback-section .user1 p{
+    text-align: left;
+    background-color: white;
+    line-height: 2.5;
+    font-size: 13px;
+    padding: 25px;
+    position: relative;
+    color: #4f4f4f;
+}
+.feedback-section .user1 p::before{
+    content: "";
+    position: absolute;
+    border-bottom: 15px solid #ffffff;
+    border-left: 15px solid transparent;
+    transform: rotate(45deg);
+    border-right: 15px solid #ffffff;
+    border-top: 15px solid transparent;
+    top: 195px;
+    left: 155px;
+}
+
+.feedback-section .user1 .user-name{
+    margin-top: 15px;
+    position: relative;
+    display: inline-block;
+    top: -35px;
+    left: 15px;
+}
+
+.feedback-section .user1 .user-pro{
+    display: inline-block;
+}
+.feedback-section .user1  img{
+    width: 110px;
+}
+
+.user-name-pro {
+    margin-top: 30px;
+    position: relative;
+}
+   
+/* subscribtoin section end */
+
+/* contact us section */
+
+.contact-us-section{
+    font-family: sans-serif;
+    padding: 35px;
+}
+.contact-us-section h3{
+   text-align: center;
+}
+.contact-us-section p{
+   width: 600px;
+   margin: auto;
+   padding: 20px;
+   color: #534b4b ;}
+
+.contact-us-section .form{
+   padding: 20px;
+}
+.contact-us-section .form .input-box{
+    height: 30px;
+    width: 540px;
+    padding: 10px;
+    border: 1px solid #979704;
+    border-radius: 10px;
+    display: block;
+    margin: 5px auto;
+}
+
+.input-name{
+    display: block;
+    text-align: center;
+}
+
+input.input-box1.name-btn, input.input-box2{
+    height: 35px;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #979704;
+    border-radius: 10px;
+    /* display: block; */
+    margin: 7px 5px;
+    text-align: center;
+}
+
+.contact-us-section .form textarea{
+    height: 140px;
+    width: 555px;
+    display: block;
+    margin: 17px auto;
+    border-radius: 10px;
+    border: 1px solid yellowgreen;
+}
+.contact-us-section .form .btn{
+    padding: 13px 50px;
+    border-radius: 7px;
+    border-style: none;
+    background: #b09f13;
+    color: white;
+    font-weight: 700;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+.contact-us-section .form .btn:hover{
+    background-color:#a6b91a;
+    border: 2px solid orange;
+    color: black;
+}
+
+
+footer
+{
+    text-align: center;
+    font-family: sans-serif;
+    color: #8f8f8f;
+    padding-bottom: 40px;
+}
